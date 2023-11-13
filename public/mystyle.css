@@ -1,0 +1,26 @@
+h3 {
+    color: blueviolet;
+}
+
+p {
+    color: aqua;
+    text-align: justify;
+}
+
+body {
+    background-color: beige;
+}
+
+.ratakanan {
+    text-align: right;
+    color: aqua;
+    font-weight: bold;
+}
+
+.kotaku1 {
+    border-style: solid;
+}
+
+.fotolingkaran {
+    border-radius: 50%;
+}

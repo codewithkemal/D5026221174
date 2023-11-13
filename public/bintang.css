@@ -1,0 +1,59 @@
+.star {
+    color: gold;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.size-btn {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.size-btn.active {
+    background-color: red;
+    border-color: red;
+}
+
+.ingredient-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.ingredient-img {
+    width: 50px;
+    height: 50px;
+}
+
+.cart-button {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.order-button {
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
