@@ -43,7 +43,7 @@ Route::get('/ETS', function () {
 
 Route::get('/perkalian','App\Http\Controllers\DosenController@index') ;
 Route::get('/show', 'App\Http\Controllers\DosenController@showBlog');
-
+Route::get('/pegawai/{nama}', 'App\Http\Controllers\DosenController@showNama');
 
 Route::get('/Linktree', function () {
     return view('Linktree');
@@ -56,3 +56,4 @@ Route::get('/Validasi1', function () {
 Route::get('/Validasi2', function () {
     return view('Validasi2');
 });
+
