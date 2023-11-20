@@ -69,3 +69,6 @@ Route::get('/Validasi2', function () {
     return view('Validasi2');
 });
 
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
