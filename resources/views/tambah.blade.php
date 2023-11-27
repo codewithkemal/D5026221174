@@ -15,6 +15,11 @@
 
 	<form action="/pegawai/store" method="post">
 		{{ csrf_field() }}
+        <div class = "form-group">
+            <label for = "firstname" class = "col-sm-2 control-label">Nama</label>
+            <div class = "col-sm-10">
+               <input type = "nama" type = "form-control" id = "firstname" placeholder = "Masukkan Nama Pegawai">
+            </div>
 		Nama <input type="text" name="nama" required="required"> <br/>
 		Jabatan <input type="text" name="jabatan" required="required"> <br/>
 		Umur <input type="number" name="umur" required="required"> <br/>
