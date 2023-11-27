@@ -17,28 +17,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blog2', function () {
+Route::get('/blog', function () {
     return view('blog');
 });
 
-Route::get('/Week1', function () {
-    return view('Week1');
+Route::get('/week1', function () {
+    return view('week1');
 });
 
-Route::get('/Week2-2', function () {
-    return view('Week2-2');
+Route::get('/week2-2', function () {
+    return view('week2-2');
 });
 
-Route::get('/Week2-3', function () {
-    return view('Week2-3');
+Route::get('/week2-3', function () {
+    return view('week2-3');
 });
 
-Route::get('/Week4', function () {
-    return view('Week4');
+Route::get('/week4', function () {
+    return view('week4');
 });
 
-Route::get('/ETS', function () {
-    return view('ETS');
+Route::get('/ets', function () {
+    return view('ets');
 });
 
 // Route::get('/Week8', function () {
@@ -57,20 +57,20 @@ Route::get('/blog', 'App\Http\Controllers\BlogController@home');
 Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
 Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
 //ea
-Route::get('/Linktree', function () {
-    return view('Linktree');
+Route::get('/linktree', function () {
+    return view('linktree');
 });
 
-Route::get('/Validasi1', function () {
-    return view('Validasi1');
+Route::get('/validasi1', function () {
+    return view('validasi1');
 });
 
-Route::get('/Validasi2', function () {
-    return view('Validasi2');
+Route::get('/validasi2', function () {
+    return view('validasi2');
 });
 
-Route::get('/pegawai','PegawaiController@index');
-Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
+Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController\PegawaiController@tambah');
 Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
