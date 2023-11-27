@@ -41,6 +41,10 @@ Route::get('/ets', function () {
     return view('ets');
 });
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 // Route::get('/Week8', function () {
 //     return view('week8');
 // });
