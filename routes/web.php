@@ -51,7 +51,7 @@ Route::get('/profile', function () {
 
 Route::get('/perkalian','App\Http\Controllers\DosenController@index') ;
 Route::get('/show', 'App\Http\Controllers\DosenController@showBlog');
-Route::get('/pegawai/{nama}', 'App\Http\Controllers\DosenController@showNama');
+Route::get('/pegawai/custom-name/{nama}', 'App\Http\Controllers\DosenController@showNama');
 
 Route::get('/formulir', 'App\Http\Controllers\DosenController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\DosenController@proses');
@@ -75,8 +75,11 @@ Route::get('/validasi2', function () {
 
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
 Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController\PegawaiController@tambah');
-Route::post('/pegawai/store','PegawaiController@store');
-Route::get('/pegawai/edit/{id}','PegawaiController@edit');
-Route::post('/pegawai/update','PegawaiController@update');
-Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
-Route::get('/pegawai/cari','PegawaiController@cari');
+Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
+Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
+Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
+Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
+Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
+
+Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
