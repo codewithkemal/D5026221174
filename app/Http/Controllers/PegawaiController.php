@@ -13,7 +13,7 @@ class PegawaiController extends Controller
     	// mengambil data dari table pegawai
     	//$pegawai = DB::table('pegawai')->get();
 
-        $pegawai = DB::table('pegawai')->paginate();
+        $pegawai = DB::table('pegawai')->paginate(10);
         //tergantung bagian mana yang ditunjukkan, ada di slide ppt week 14
 
     	// mengirim data pegawai ke view index
@@ -36,7 +36,7 @@ class PegawaiController extends Controller
         // mengambil data pegawai berdasarkan id yang dipilih
         $pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('edit',['pegawai' => $pegawai]);
+        return view('view',['pegawai' => $pegawai]);
 
     }
 

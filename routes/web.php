@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('halo', function () {
+	return "Halo, Selamat datang di tutorial laravel www.malasngoding.com";
+});
+
 Route::get('/blog', function () {
     return view('blog');
 });
@@ -45,10 +49,6 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-// Route::get('/Week8', function () {
-//     return view('week8');
-// });
-
 Route::get('/perkalian','App\Http\Controllers\DosenController@index') ;
 Route::get('/show', 'App\Http\Controllers\DosenController@showBlog');
 Route::get('/pegawai/custom-name/{nama}', 'App\Http\Controllers\DosenController@showNama');
@@ -74,7 +74,7 @@ Route::get('/validasi2', function () {
 });
 
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
-Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController\PegawaiController@tambah');
+Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiController@tambah');
 Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
 Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
