@@ -80,10 +80,17 @@ Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
-
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
 Route::get('/nilaikuliah','App\Http\Controllers\NilaiController@index');
 Route::get('/nilaikuliah/tambahNilai','App\Http\Controllers\NilaiController@tambah');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiController@store');
 
+Route::get('/vga/index', [VGAController::class, 'index']);
+Route::get('/vga/tambah', [VGAController::class, 'tambah']);
+Route::post('/vga/store', [VGAController::class, 'store']);
+Route::get('/vga/edit/{kode}', [VGAController::class, 'edit']);
+Route::post('/vga/update', [VGAController::class, 'update']);
+Route::get('/vga/hapus/{kode}', [VGAController::class, 'hapus']);
+Route::post('/vga/cari', [VGAController::class, 'cari']);
+Route::get('/vga/view/{kode}', [VGAController::class, 'view']);
