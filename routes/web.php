@@ -94,3 +94,8 @@ Route::post('/vga/update', 'App\Http\Controllers\VgaController@update');
 Route::get('/vga/hapus/{kode}', 'App\Http\Controllers\VgaController@hapus');
 Route::post('/vga/cari', 'App\Http\Controllers\VgaController@cari');
 Route::get('/vga/view/{kode}', 'App\Http\Controllers\VgaController@view');
+
+use App\Http\Controllers\CCController;
+
+Route::get('/combo', [CCController::class, 'index']);
+Route::post('/hasilcombo', [CCController::class, 'hasil'])->name('hasilcombo');
