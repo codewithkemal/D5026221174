@@ -4,7 +4,7 @@
 	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Data Pegawai</h3>
 
-	<a href="/pegawai"> Kembali</a>
+	<a href="/pegawai"> < Kembali</a>
 
 	<br/>
 	<br/>
@@ -16,7 +16,6 @@
             <div class="col-sm-4 border">
             {{-- tambahin images disini bang --}}
             </div>
-
             <div class="col-sm-8">
                 <div class = "form-group row">
                     <label for = "nama" class = "col-sm-2 control-label">Nama</label>

@@ -4,20 +4,18 @@
     @section('judul_halaman')
 	<h2>www.malasngoding.com</h2>
 	<h3>Data Pegawai</h3>
-
 	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-
 	<br/>
 	<br/>
     @endsection
 
     @section('konten')
-
     <p>Cari Data Pegawai :</p>
 	<form action="/pegawai/cari" method="GET">
 		<input type="text" name="cari" placeholder="Cari Pegawai berdasarkan nama .." value="{{ old('cari') }}">
 		<input type="submit" value="CARI" class="btn btn-primary">
 	</form>
+    <br>
 
 	<table class="table table-striped table-hover">
 		<tr>
@@ -45,7 +43,7 @@
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
                 <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-success">View</a>
-
+                |
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning">Edit</a>
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger">Hapus</a>

@@ -4,18 +4,24 @@
 
 @section('judul_halaman')
     <h3>Data VGA</h3>
-    <a href="{{ route('vga.tambah') }}">+ Tambah VGA Baru</a>
-
+    <a href="/vga/tambah">+ Tambah VGA Baru</a>
     <br/>
     <br/>
 @endsection
 
 @section('konten')
+    {{-- Pesan Success --}}
+    @if(session('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <p>Cari Data VGA :</p>
-    <form action="{{ route('vga.cari') }}" method="GET">
+    <form action="/vga/cari" method="post">
         @csrf
         <input class="form-control" type="text" name="cari" placeholder="Cari VGA Berdasarkan Nama..." value="{{ old('cari') }}">
-        <input type="submit" value="CARI" class="btn btn-info">
+        <input type="submit" value="CARI" class="btn btn-primary">
     </form>
     <br>
 
@@ -36,11 +42,11 @@
                     {{ ($v->stockvga > 0) ? 'Y' : 'N' }}
                 </td>
                 <td>
-                    <a href="{{ route('vga.view', $v->kodevga) }}" class="btn btn-success">View</a>
+                    <a href="/vga/view/{{ $v->kodevga }}" class="btn btn-success">View</a>
                     |
-                    <a href="{{ route('vga.edit', $v->kodevga) }}" class="btn btn-warning">Edit</a>
+                    <a href="/vga/edit/{{ $v->kodevga }}" class="btn btn-warning">Edit</a>
                     |
-                    <a href="{{ route('vga.hapus', $v->kodevga) }}" class="btn btn-danger">Hapus</a>
+                    <a href="/vga/hapus/{{ $v->kodevga }}" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>
         @empty
@@ -49,4 +55,5 @@
             </tr>
         @endforelse
     </table>
+    {{ $vga->links() }}
 @endsection
