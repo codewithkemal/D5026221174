@@ -97,5 +97,6 @@ Route::get('/vga/view/{kode}', 'App\Http\Controllers\VgaController@view');
 
 use App\Http\Controllers\CCController;
 
-Route::get('/combo', [CCController::class, 'index']);
-Route::post('/hasilcombo', [CCController::class, 'hasil'])->name('hasilcombo');
+Route::get('/indexcc', [CCController::class, 'showForm']);
+Route::get('/hasilcc', [CCController::class, 'showResult']);
+Route::post('/hasilcc', [CCController::class, 'processForm']);

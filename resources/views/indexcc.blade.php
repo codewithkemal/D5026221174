@@ -6,13 +6,13 @@
 @endsection
 
 @section('konten')
-<form method="POST" action="{{ route('hasilcombo') }}">
+<form action="/hasilcc" method="POST">
     @csrf
     <div class="form-group">
         <label for="exampleFormControlSelect1">Pilih Kategori</label>
-        <select class="form-control" id="exampleFormControlSelect1" name="kategori">
+        <select class="form-control" id="hasilcc" name="hasilcc">
             @foreach($kategori as $k)
-                <option value="{{ $k->id }}">{{ $k->nama }}</option>
+                <option value="{{ $k->ID }}">{{ $k->Nama }}</option>
             @endforeach
         </select>
     </div>
